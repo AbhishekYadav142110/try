@@ -1,5 +1,6 @@
 import React from 'react';
 import ListElement from './ListElement';
+import './styles.css';
 
 export default class Media extends React.Component{
 
@@ -77,31 +78,33 @@ export default class Media extends React.Component{
         return (
             <div className="container" style={{display: "flex"}}>
                 <div className="left">
-                    <div>
+                    <div className='email-title'>
                         Email Address
                     </div>
-                    <input type="text" value={this.state.value} onChange={this.handleChange} style={{display:"block"}} />
+                    <input type="text" className={'email-input'} value={this.state.value} onChange={this.handleChange} style={{display:"block"}} size="50" />
                     {!this.state.valid && <div style={{color:"red"}}>Not a valid email</div>}
-                    <button onClick={this.handleClick}>
+                    <button className={'add-btn'} onClick={this.handleClick}>
                         Add
                     </button>
                 </div>
                 <div className="right">
-                    <div>
-                        <input type="text" value={this.state.searchValue} onChange={this.handleSearch} />
-                        <button onClick={this.search}>Search</button>
+                    <div className="search">
+                        <input type="text" value={this.state.searchValue} onChange={this.handleSearch} size="30" />
+                        <button className='search-btn' onClick={this.search}>Search</button>
                     </div>
-                    <input type="checkbox" value={this.state.isChecked} onChange={this.handleCheck}/>
-                    Show enabled emails
+                    <div className="enabled-email">
+                        <input type="checkbox" value={this.state.isChecked} onChange={this.handleCheck}/>
+                        Show enabled emails
+                    </div>
                     <div>
-                        <table border="1">
-                            <tr>
-                                <th>isEnabled</th>
-                                <th>Email</th>
-                                <th>Delete</th>
-                            </tr>
+                        <div>
+                            <div className="row head">
+                                <div className="checkbox">isEnabled</div>
+                                <div className="email">Email</div>
+                                <div className="delete">Delete</div>
+                            </div>
                             {emails}
-                        </table>
+                        </div>
                     </div>
                 </div>
             </div>

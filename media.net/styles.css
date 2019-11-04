@@ -1,0 +1,69 @@
+.container{
+    display: flex;
+}
+.container .left{
+    width: 40vw;
+    padding:30px;
+}
+.container .left .email-title{
+    margin-bottom: 20px;
+    font-size: x-large;
+    color: #437dff;
+}
+.container .left .email-input{
+    display: block;
+    margin-bottom: 15px;
+}
+.container .left .add-btn{
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    background: #437dff;
+    color: white;
+    font-weight: 600;
+}
+.container .right{
+    width: 60vw;
+    padding: 30px;
+}
+.container .right .search{
+    margin-bottom: 20px;
+}
+.container .right .search-btn{
+    color: white;
+    font-weight: 400;
+    background: #437dff;
+    border-radius: 5px;
+    height: 30px;
+    width: 80px;
+}
+.container .right .enabled-email{
+    margin-bottom: 15px;
+}
+.container .right .row{
+    display: flex;
+    border-bottom: 1px solid #ececec;
+    width: max-content;
+}
+.container .right .row div{
+    margin: auto 0;
+    text-align: center;
+}
+.container .right .row .checkbox{
+    width: 60px;
+}
+.container .right .row .email{
+    width: 400px;
+    overflow-x: auto;
+}
+.container .right .row .delete{
+    width: 60px;
+}
+.container .delete img{
+    cursor: pointer;
+}
+.container .right .row.head div{
+    text-align: center;
+    font-weight: 900;
+    font-size: larger;
+}

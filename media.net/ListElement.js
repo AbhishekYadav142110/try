@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css';
 
 export default class ListElement extends React.Component{
         constructor(props){
@@ -37,17 +38,17 @@ export default class ListElement extends React.Component{
         render(){
             let display;
             let row = 
-            <tr>
-                <td>
+            <div className="row">
+                <div className="checkbox">
                     <input type="checkbox" value={this.state.isChecked} onChange={this.handleChange}/>
-                </td>
-                <td>
+                </div>
+                <div className="email">
                     {this.props.email}
-                </td>
-                <td>
-                    <button onClick={this.handleDelete}>Delete</button>
-                </td>
-            </tr>
+                </div>
+                <div className="delete">
+                    <img height="40px" src="https://i.ibb.co/VpH695X/23770233.jpg" onClick={this.handleDelete} />
+                </div>
+            </div>
 
             if(this.props.isChecked && !this.state.isDeleted){
                 display = this.state.isChecked && row
@@ -73,5 +74,4 @@ export default class ListElement extends React.Component{
                 }
             }
         }
-
 }    
